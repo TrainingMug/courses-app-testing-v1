@@ -1,0 +1,35 @@
+div.new-user-section{
+    width:30vw;
+    margin:8vh 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.new-user-header{
+    font-size:1em;
+}
+div.server-error-section{
+    width:30vw;
+    display: flex;
+    margin:8vh 10vw 5vh 10vw;
+    align-items: center;
+    justify-content: space-between;
+}
+.login-form-container{
+    width: 30vw;
+    margin:10vh 10vw;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+.server-error{    
+    color:red;
+    font-size:1rem;
+}
+@media(max-width:575px){
+    .login-form-container{
+    width:50vw;
+    margin:10vh 5vw;
+    }
+}

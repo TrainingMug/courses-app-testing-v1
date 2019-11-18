@@ -1,0 +1,96 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Introduction to HTML5",
+      "description": "This course teaches you the basic fundamentals of web page development using HTML5",
+      "imageURL": "../../assets/images/html5_1.jpg",
+      "mentor": "Madhu Samala"
+    },
+    {
+      "id": 2,
+      "name": "Web Page Development using HTML5",
+      "description": "This course teaches you to develop awesome web pages using HTML5",
+      "imageURL": "../../assets/images/html5_2.png",
+      "mentor": "Madhu Samala"
+    },
+    {
+      "id": 4,
+      "name": "Responsive Web Design Using CSS3 Media Queries",
+      "description": "This course teaches you to design responsive web pages using CSS3 media queries",
+      "imageURL": "../../assets/images/css3_2.png",
+      "mentor": "Madhu Samala"
+    },
+    {
+      "name": "Advanced CSS3 Animations",
+      "description": "This course teaches you the advanced animations effect using CSS3",
+      "imageURL": "../../assets/images/css3_2.png",
+      "mentor": "Madhu Samala",
+      "id": 5
+    },
+    {
+      "name": "JavaScript Beginners Course",
+      "description": "This Course teaches you the JavaSCript fundamentals ",
+      "imageURL": "../../assets/images/JavaScript_1.jpg",
+      "mentor": "Madhu Samala",
+      "id": 6
+    },
+    {
+      "name": "JavaScript Master Program",
+      "description": "This course is to master your JavaScript programming skills",
+      "imageURL": "../../assets/images/JavaScript_2.jpg",
+      "mentor": "Madhu Samala",
+      "id": 7
+    }
+  ],
+  "users": [
+    {
+      "username": "user111",
+      "password": "user111",
+      "email": "user111@gmail.com",
+      "id": 1,
+      "favouriteCoursesList": [
+        {
+          "id": 1,
+          "name": "Introduction to HTML5",
+          "description": "This course teaches you the basic fundamentals of web page development using HTML5",
+          "imageURL": "../../assets/images/html5_1.jpg",
+          "mentor": "Madhu Samala",
+          "favourite": true
+        },
+        {
+          "name": "Advanced CSS3 Animations",
+          "description": "This course teaches you the advanced animations effect using CSS3",
+          "imageURL": "../../assets/images/css3_2.png",
+          "mentor": "Madhu Samala",
+          "id": 5,
+          "favourite": true
+        },
+        {
+          "name": "JavaScript Beginners Course",
+          "description": "This Course teaches you the JavaSCript fundamentals ",
+          "imageURL": "../../assets/images/JavaScript_1.jpg",
+          "mentor": "Madhu Samala",
+          "id": 6,
+          "favourite": true
+        }
+      ]
+    },
+    {
+      "username": "user222",
+      "password": "user222",
+      "email": "user222@gmail.com",
+      "id": 2,
+      "favouriteCoursesList": [
+        {
+          "id": 2,
+          "name": "Web Page Development using HTML5",
+          "description": "This course teaches you to develop awesome web pages using HTML5",
+          "imageURL": "../../assets/images/html5_2.png",
+          "mentor": "Madhu Samala",
+          "favourite": true
+        }
+      ]
+    }
+  ]
+}

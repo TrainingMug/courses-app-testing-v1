@@ -1,0 +1,13 @@
+div.layout-container{
+    display: flex;
+    height:  100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.dashboard{    
+    margin-left:20vw;
+}
+app-footer{
+    margin-left:10vw;
+}

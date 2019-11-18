@@ -1,0 +1,29 @@
+<mat-card class="course-card">
+    <mat-card-header>
+      <mat-card-title>{{course.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{course.imageURL}}" alt="Course Image" class="course-image">
+    <mat-card-content>
+      <p class="course-description">
+        {{course.description}}
+      </p>
+      <p class="course-mentor">
+        Mentor : {{course.mentor}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <span class="example-spacer"></span>
+      <section class="user-favourite-section" *ngIf="loggedInUser.role === 'user'">
+        <button mat-icon-button color="primary" class="selected" aria-label="Example icon-button with a heart icon"
+          *ngIf="course.favourite" (click)="unFavouriteCourse(course)" class="remove-favourite-button">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="default" aria-label="Example icon-button with a heart icon" class="add-favourite-button"
+          (click)="favouriteCourse(course)" *ngIf="!course.favourite">
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </section>
+
+     
+    </mat-card-actions>
+  </mat-card>

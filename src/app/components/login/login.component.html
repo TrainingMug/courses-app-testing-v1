@@ -1,0 +1,49 @@
+
+    <div class="server-error-section" *ngIf="serverErrorMessage">
+        <h2 class="server-error">{{serverErrorMessage}}</h2>
+      </div>
+      
+      <mat-card class="login-form-container">
+          <mat-card-title>Login Form</mat-card-title> 
+           <mat-card-content>
+          <form [formGroup]="loginForm" class="login-form" (ngSubmit)="validateLogin(loginForm)">
+            <mat-form-field>
+              <input type="username" matInput placeholder="Enter UserName" formControlName="username" (input)="clearErrorMessage()">
+              <mat-error class="username-validation-error" *ngIf="(loginForm.get('username')?.touched || loginForm.get('username')?.dirty) && loginForm.get('username')?.hasError('required')">
+                Username is <strong>required</strong>
+              </mat-error>
+              
+              <mat-error *ngIf=" (loginForm.get('username')?.touched || loginForm.get('username')?.dirty) && loginForm.get('username')?.hasError('minlength')" class="username-validation-error">
+               UserName must be min 5 characters
+              </mat-error>
+            </mat-form-field>
+        
+            <mat-form-field>
+              <input type="password" matInput placeholder="Enter Password" formControlName="password">
+              <mat-error *ngIf=" (loginForm.get('password')?.touched || loginForm.get('password')?.dirty) && loginForm.get('password')?.hasError('required')">
+                Password is <strong>required</strong>
+              </mat-error>
+              <mat-error *ngIf=" (loginForm.get('password')?.touched || loginForm.get('password')?.dirty) && loginForm.get('password')?.hasError('minlength')">
+                Password must be min 6 characters
+               </mat-error>
+            </mat-form-field>
+  
+            <!-- <mat-form-field>
+                  <mat-label>Select Role</mat-label>
+                  <mat-select  formControlName="role">
+                    <mat-option *ngFor="let role of roles" [value]="role">
+                      {{role}}
+                    </mat-option>
+                  </mat-select>
+  
+                  <mat-error *ngIf=" (loginForm.get('role')?.touched || loginForm.get('role')?.dirty) && loginForm.get('password')?.hasError('required')">
+                          You must select  <strong>role</strong>
+                        </mat-error>
+                </mat-form-field>
+   -->
+        
+            <button mat-button [disabled]="loginForm.invalid">Login</button>
+          </form>
+        </mat-card-content>
+        </mat-card>
+      

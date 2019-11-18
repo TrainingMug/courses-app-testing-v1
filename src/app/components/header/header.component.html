@@ -1,0 +1,41 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === false">
+      <mat-toolbar>Menu</mat-toolbar>
+
+      <mat-nav-list *ngIf="isUserLoggedIn">
+        <a mat-list-item routerLink="/courses-list">Courses List</a>
+        <a mat-list-item routerLink="/courses-list/favourites">Favourite Courses List</a>
+        <a mat-list-item routerLink="/courses-list" [queryParams]="{course : 'angular'}">Angular</a>
+        <a mat-list-item routerLink="/courses-list" [queryParams]="{course : 'javascript'}">JavaScript</a>
+        <a mat-list-item routerLink="/courses-list" [queryParams]="{course : 'html5'}">HTML5</a>
+        <a mat-list-item routerLink="/courses-list" [queryParams]="{course : 'css3'}">CSS3</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span><img src="../../../../assets/images/TrainingMug.png" alt="TrainingMug Logo" srcset="" class="logo-img"></span>
+        <span class="example-spacer"></span>
+        <section class="login-signup-section" *ngIf="!isUserLoggedIn">           
+          <button mat-raised-button color="warn" class="login-button" (click)="routeToLogin()">Login</button>
+        </section>
+
+        <section class="login-signup-section" *ngIf="isUserLoggedIn">
+          <button mat-raised-button color="warn" class="logout-button" (click)="logout()">Logout</button>
+        </section>
+        
+      </mat-toolbar>
+      <!-- Add Content Here -->
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

@@ -1,0 +1,16 @@
+button.selected{
+    color:rgb(103,58,183) !important; 
+}
+
+
+
+
+div.course-container-section{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+
+
+
