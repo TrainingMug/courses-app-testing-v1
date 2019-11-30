@@ -7,7 +7,7 @@
 
       <mat-nav-list *ngIf="isUserLoggedIn">
         <a mat-list-item routerLink="/courses-list">Courses List</a>
-        <a mat-list-item routerLink="/courses-list/favourites">Favourite Courses List</a>
+        <a mat-list-item routerLink="/fav-courses-list">Favourite Courses List</a>
         <a mat-list-item routerLink="/courses-list" [queryParams]="{course : 'angular'}">Angular</a>
         <a mat-list-item routerLink="/courses-list" [queryParams]="{course : 'javascript'}">JavaScript</a>
         <a mat-list-item routerLink="/courses-list" [queryParams]="{course : 'html5'}">HTML5</a>

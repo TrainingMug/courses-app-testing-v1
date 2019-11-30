@@ -1,0 +1,14 @@
+<section class="course-dashboard-container-section">    
+   
+   
+   
+    <div class="course-container-section">
+      <app-course [course]="course" 
+                  [loggedInUser]="loggedInUser" 
+                  *ngFor="let course of userFavouriteCoursesList"
+                  (addCourseToFavourite) ="addCourseToFavouriteBackend($event)"
+                  (removeCourseFromFavourite) = "removeCourseFromFavourites($event)"
+                  >
+      </app-course>      
+    </div>
+    </section>
